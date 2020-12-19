@@ -10,7 +10,7 @@
       title: "Portfolio title: #{portfolio_items}",
       subtitle: "My great service",
       body: "Lorem ipsum.",
-      main_image:"https://via.placeholder.com/600x200",
-      thumb_image:"https://via.placeholder.com/350x200"
+      main_image: "https://via.placeholder.com/600x200",
+      thumb_image: "https://via.placeholder.com/350x200"
   )
       end
