@@ -1,12 +1,10 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  before_action :set_blog, only: %w[show edit update destroy toggle_status]
 
   def index
     @blogs = Blog.all
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
   end
 
