@@ -5,13 +5,17 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
-  def show; end
+  def ror
+    @ror_items = Portfolio.ror_portfolio_items
+  end
+
+  def angular
+    @angular = Portfolio.angular
+  end
 
   def new
     @portfolio_item = Portfolio.new
   end
-
-  def edit; end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)

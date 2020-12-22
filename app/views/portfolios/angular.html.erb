@@ -1,0 +1,9 @@
+<h2 class="method-description">Angular</h2>
+
+<% @angular.each do |item| %>
+  <p><%= item.title %></p>
+  <p><%= item.subtitle %></p>
+  <p><%= item.body %></p>
+  <%= image_tag item.main_image %>
+  <%= image_tag item.thumb_image %>
+<% end %>
