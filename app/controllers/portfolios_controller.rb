@@ -1,17 +1,22 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: %i[show edit update destroy]
+  before_action :set_portfolio, only: %w[show edit update destroy]
 
   def index
     @portfolio_items = Portfolio.all
   end
 
-  def show; end
+  def ror
+    @ror_items = Portfolio.ror_portfolio_items
+  end
+
+  def angular
+    @angular = Portfolio.angular
+  end
 
   def new
     @portfolio_item = Portfolio.new
+    3.times{ @portfolio_item.technologies.build }
   end
-
-  def edit; end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
@@ -54,6 +59,8 @@ class PortfoliosController < ApplicationController
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+    params.require(:portfolio).permit(:title, :subtitle,
+                                      :body, :main_image, :thumb_image,
+                                      technologies_attributes: [:name])
   end
 end
