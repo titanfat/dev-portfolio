@@ -1,11 +1,15 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %w[show edit update destroy toggle_status]
+  layout 'blog'
 
   def index
     @blogs = Blog.all
+    @page_title = "My Blog"
   end
 
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
