@@ -1,4 +1,5 @@
 <h2 class="method-description">Angular</h2>
+<%= link_to 'Create item', new_portfolio_path if logged_in?(:site_admin)  %>
 
 <% @angular.each do |item| %>
   <p><%= item.title %></p>

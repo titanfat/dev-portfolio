@@ -1,7 +1,7 @@
 <h2 class="method-description">Portfolio item</h2>
 
 
-<%= link_to 'Create new item', new_portfolio_path %>
+<%= link_to 'Create new item', new_portfolio_path if logged_in?(:site_admin) %>
 <%= link_to 'Angular', angular_path %>
 
 <%= render partial: 'portfolio_item',collection: @portfolio_items %>
