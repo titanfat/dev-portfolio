@@ -30,6 +30,7 @@ gem 'friendly_id'
 gem 'devise'
 gem 'bootstrap', '~> 5.0.0.alpha3'
 gem 'jquery-rails'
+gem 'mini_racer'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
