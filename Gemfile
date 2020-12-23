@@ -28,7 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'friendly_id'
 gem 'devise'
-# Use Capistrano for deployment
+gem 'bootstrap', '~> 5.0.0.alpha3'
+gem 'jquery-rails'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
