@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %w[show edit update destroy toggle_status]
   layout 'blog'
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @blogs = Blog.all
-    @page_title = "My Blog"
+    @blogs = Blog.page(params[:page]).per(5)
+    @page_title = "My Developer Blog"
   end
 
   def show

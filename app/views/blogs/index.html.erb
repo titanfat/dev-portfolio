@@ -1,20 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8 blog-main">
 
-<h1>Blogs</h1>
+  <%= paginate @blogs %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
   <%= render @blogs %>
-  </tbody>
-</table>
 
-<br>
-<%= link_to 'New Blog', new_blog_path %>
+  <%= paginate @blogs %>
+
+</div>
