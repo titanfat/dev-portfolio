@@ -10,12 +10,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'mini_racer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'redis', '~> 4.0'
 gem 'friendly_id'
 gem 'devise'
 gem 'bootstrap', '~> 5.0.0.alpha3'
@@ -36,3 +33,6 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'font-awesome-rails'
+gem 'kaminari'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'gritter'

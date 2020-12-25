@@ -52,4 +52,9 @@ module ApplicationHelper
       nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
   end
+
+  def active? path
+    "active" if current_page? path
+  end
+
 end
