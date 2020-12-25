@@ -15,4 +15,41 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def nav_items
+    [
+        {
+            url: root_path,
+            title: 'Home'
+        },
+        {
+            url: about_me_path,
+            title: 'About Me'
+        },
+        {
+            url: contact_path,
+            title: 'Contact'
+        },
+        {
+            url: blogs_path,
+            title: 'My Developer Blog'
+        },
+        {
+            url: portfolios_path,
+            title: 'Portfolio'
+        },
+        {
+            url: tech_news_path,
+            title: 'Tech News'
+        },
+    ]
+  end
+
+  def nav_helper style, tag_type
+    nav_links = ''
+
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+  end
 end
