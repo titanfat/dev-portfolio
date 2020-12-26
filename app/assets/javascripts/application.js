@@ -14,6 +14,8 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require lib/typed
+//= require typed-implementation.coffee
 //= require jquery-ui
 //= require html.sortable
 //= require_tree .
