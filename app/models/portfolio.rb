@@ -8,6 +8,10 @@ class Portfolio < ApplicationRecord
   scope :angular, -> { where(subtitle: 'Angular') }
 
   after_initialize :set_default
+  
+  def self.by_position
+    order("position ASC")
+  end
 
   def set_default
     self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
