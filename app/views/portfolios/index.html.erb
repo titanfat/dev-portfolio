@@ -2,7 +2,7 @@
   <div class="container">
     <!--%= source_helper("alert alert-warning") %-->
 
-    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
+    <div class="row sortable">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
   </div>

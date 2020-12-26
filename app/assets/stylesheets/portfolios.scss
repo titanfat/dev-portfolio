@@ -2,16 +2,16 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
-//@import "jquery-ui";
+@import "jquery-ui";
 //@import "gritter";
 
-@font-face {
+/*@font-face {
   font-family: 'Lato';
   src:font-url('Lato-Regular.ttf');
-}
+}*/
 
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto S';
   src:font-url('RobotoSlab-Regular.ttf');
 }
 

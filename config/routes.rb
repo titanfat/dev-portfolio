@@ -7,7 +7,9 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   get 'angular', to: 'portfolios#angular', as: 'angular'
   root 'pages#home'
