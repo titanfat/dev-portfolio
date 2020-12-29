@@ -139,7 +139,7 @@ body {
   }
   .mastfoot {
     position: fixed;
-    bottom: 0;
+    padding-top: 150px;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -246,4 +246,9 @@ body {
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.social-links li {
+  font-size: 2.1em;
+  display:inline;
 }

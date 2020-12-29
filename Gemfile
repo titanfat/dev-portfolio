@@ -28,7 +28,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
-    #gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -37,6 +37,5 @@ gem 'kaminari'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'gritter'
 gem 'carrierwave'
-gem 'carrierwave-aws'
 gem 'mini_magick'
 gem 'dotenv-rails'
