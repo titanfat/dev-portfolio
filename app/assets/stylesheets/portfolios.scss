@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "jquery-ui";
-//@import "gritter";
+@import "gritter";
 
 /*@font-face {
   font-family: 'Lato';
@@ -63,7 +63,6 @@ h6, .h6 {
 .card {
   float: left;
   width: 50%;
-  height: 30%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
