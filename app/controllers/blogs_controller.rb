@@ -4,13 +4,25 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+    @blogs = Blog.draft.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.page(params[:page]).per(5)
+    end
     @page_title = "My Developer Blog"
   end
 
   def show
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page"
+    end
     @page_title = @blog.title
     @seo_keywords = @blog.body
+
+
   end
 
   # GET /blogs/new
