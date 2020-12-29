@@ -30,7 +30,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 body {
   color: #fff;
@@ -140,7 +139,7 @@ body {
   }
   .mastfoot {
     position: fixed;
-    bottom: 0;
+    padding-top: 150px;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -200,12 +199,13 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.png') no-repeat;
+  background: image-url('videoplayback.jpg') no-repeat;
   background-size: cover;
 }
 
 .app-footer {
   color: white;
+  flex-direction: row-reverse;
 }
 
 .tech-news {
@@ -246,4 +246,9 @@ body {
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.social-links li {
+  font-size: 2.1em;
+  display:inline;
 }
