@@ -18,6 +18,7 @@ gem 'bootstrap', '~> 5.0.0.alpha3'
 gem 'jquery-rails'
 gem 'petergate'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'libv8', '~> 8.4', '>= 8.4.255.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
