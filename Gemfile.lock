@@ -303,6 +303,7 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.4)
   redcarpet (~> 3.4)
   sass-rails (~> 5.0)
+  sassc
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
