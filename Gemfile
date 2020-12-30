@@ -39,7 +39,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'dotenv-rails'
 gem 'cocoon'
-gem 'twitter'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
-
+gem 'twitter'
