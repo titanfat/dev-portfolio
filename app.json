@@ -1,0 +1,11 @@
+{
+  "name": "abot",
+  "description": "Slack anonymous feedback",
+  "keywords": [
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
