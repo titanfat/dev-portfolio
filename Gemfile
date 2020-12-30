@@ -12,7 +12,6 @@ gem 'mini_racer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'redis', '~> 4.0'
 gem 'friendly_id'
 gem 'devise'
 gem 'bootstrap', '~> 5.0.0.alpha3'
