@@ -62,7 +62,7 @@ h6, .h6 {
 
 .card {
   float: left;
-  width: 50%;
+  width: 100%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
@@ -70,8 +70,7 @@ h6, .h6 {
 
 .card > img {
   margin-bottom: .75rem;
-  width:80%;
-  height: 80%;
+  width: 60%;
 }
 
 .card-text {
