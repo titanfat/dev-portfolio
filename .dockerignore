@@ -1,5 +1,0 @@
-.dockerignore
-log/*
-tmp/*
-.git
-.byebag_history
