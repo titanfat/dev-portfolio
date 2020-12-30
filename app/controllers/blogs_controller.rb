@@ -1,14 +1,25 @@
 class BlogsController < ApplicationController
+  before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
   before_action :set_blog, only: %w[show edit update destroy toggle_status]
   layout 'blog'
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = if logged_in?(:site_admin)
+               Blog.recent.page(params[:page]).per(5)
+    else
+      Blog.published.recent.page(params[:page]).per(5)
+             end
     @page_title = "My Developer Blog"
   end
 
   def show
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page"
+    end
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
@@ -74,12 +85,16 @@ class BlogsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
-    end
+  def blog_params
+    params.require(:blog).permit(:title, :body, :topic_id)
+  end
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
+  end
 end
