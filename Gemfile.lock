@@ -283,6 +283,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 5.0.0.alpha3)
+  bundler
   byebug
   carrierwave
   cocoon
@@ -319,4 +320,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
